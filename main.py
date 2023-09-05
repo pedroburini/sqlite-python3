@@ -33,11 +33,17 @@ connection.commit()
 sql = (
     f'INSERT INTO {TABLE_NAME} '
     '(name, weight) '
-    '(name, weight) '
     'VALUES '
     '(?, ?)'
 )
-cursor.execute(sql, ['a', 1])
+
+# cursor.execute(sql, ['Joana', 4])
+cursor.executemany(
+    sql,
+    (
+        ('Joana', 4), ('Luiz', 5)
+    )
+)
 connection.commit()
 print(sql)
 
