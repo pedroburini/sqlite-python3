@@ -52,7 +52,9 @@ cursor.executemany(sql, (
     {'name': 'Joana', 'weight': 5},
 ))
 connection.commit()
-print(sql)
 
 cursor.close()
 connection.close()
+
+if __name__ == '__main__':
+    print(sql)
