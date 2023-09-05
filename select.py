@@ -14,8 +14,8 @@ for row in cursor.fetchall():
 print()
 
 cursor.execute(
-    f'select * FROM {TABLE_NAME} '
-    'WHERE weight = "5"'
+    f'SELECT * FROM {TABLE_NAME} '
+    'WHERE weight = 5'
 )
 row = cursor.fetchone()
 _id, name, weight = row
